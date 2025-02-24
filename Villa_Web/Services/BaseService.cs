@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Net;
 using System.Text;
 using Villa_Utility;
 using Villa_Web.Models;
@@ -46,8 +47,28 @@ namespace Villa_Web.Services
 				HttpResponseMessage apiResponse = null;
 				apiResponse = await client.SendAsync(message);
 				var apiContent = await apiResponse.Content.ReadAsStringAsync();
-				var APIResponse = JsonConvert.DeserializeObject<T>(apiContent);
+				try
+				{
+					APIResponse ApiResponse = JsonConvert.DeserializeObject<APIResponse>(apiContent);
+					if (apiResponse.StatusCode == HttpStatusCode.BadRequest || apiResponse.StatusCode == HttpStatusCode.NotFound)
+					{
+						ApiResponse.StatusCode = HttpStatusCode.BadRequest;
+						ApiResponse.IsSuccessfull = false;
+						var res = JsonConvert.SerializeObject(ApiResponse);
+						var returnObj = JsonConvert.DeserializeObject<T>(res);
+						return returnObj;
+					}
+				}
+				catch (Exception ex)
+				{
+					var exResponse = JsonConvert.DeserializeObject<T>(apiContent);
+					return exResponse;
+
+				}
+				var APIResponse =JsonConvert.DeserializeObject<T>(apiContent);
 				return APIResponse;
+
+
 			}
 			catch (Exception ex)
 			{

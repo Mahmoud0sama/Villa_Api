@@ -4616,11 +4616,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mtsid\\source\\repos\\Villa\\Villa_API\\Villa_API.csproj",
+      "projectUniqueName": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_API\\Villa_API.csproj",
       "projectName": "Villa_API",
-      "projectPath": "C:\\Users\\mtsid\\source\\repos\\Villa\\Villa_API\\Villa_API.csproj",
+      "projectPath": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_API\\Villa_API.csproj",
       "packagesPath": "C:\\Users\\mtsid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mtsid\\source\\repos\\Villa\\Villa_API\\obj\\",
+      "outputPath": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mtsid\\AppData\\Roaming\\NuGet\\NuGet.Config",

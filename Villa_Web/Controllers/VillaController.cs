@@ -39,10 +39,12 @@ namespace Villa_Web.Controllers
 				var response = await _villaService.CreateAsync<APIResponse>(model);
 				if (response != null && response.IsSuccessfull)
 				{
+					TempData["success"] = "Villa Created Successfully";
 					return RedirectToAction(nameof(IndexVilla));
 				}
 			}
-			return View(model);
+            TempData["error"] = "Error Encountered.";
+            return View(model);
 		}
 		public async Task<IActionResult> UpdateVilla(int villaId)
 		{
@@ -60,13 +62,16 @@ namespace Villa_Web.Controllers
 		{
 			if (ModelState.IsValid)
 			{
+
 				var response = await _villaService.UpdateAsync<APIResponse>(model);
 				if (response != null && response.IsSuccessfull)
 				{
-					return RedirectToAction(nameof(IndexVilla));
+                    TempData["success"] = "Villa Updated Successfully";
+                    return RedirectToAction(nameof(IndexVilla));
 				}
 			}
-			return View(model);
+            TempData["error"] = "Error Encountered.";
+            return View(model);
 		}
 		public async Task<IActionResult> DeleteVilla(int villaId)
 		{
@@ -85,9 +90,11 @@ namespace Villa_Web.Controllers
 			var response = await _villaService.DeleteAsync<APIResponse>(model.Id);
 			if (response != null && response.IsSuccessfull)
 			{
-				return RedirectToAction(nameof(IndexVilla));
+                TempData["success"] = "Villa Deleted Successfully";
+                return RedirectToAction(nameof(IndexVilla));
 			}
-			return View(model);
+            TempData["error"] = "Error Encountered.";
+            return View(model);
 		}
 	}
 }

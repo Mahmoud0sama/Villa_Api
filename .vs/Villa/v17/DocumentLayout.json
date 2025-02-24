@@ -1,7 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mtsid\\source\\repos\\Villa\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|c:\\users\\mtsid\\source\\repos\\villa_api\\villa_web\\controllers\\villanumbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|solutionrelative:villa_web\\controllers\\villanumbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|c:\\users\\mtsid\\source\\repos\\villa_api\\villa_web\\controllers\\villacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|solutionrelative:villa_web\\controllers\\villacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|c:\\users\\mtsid\\source\\repos\\villa_api\\villa_web\\views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|solutionrelative:villa_web\\views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|c:\\users\\mtsid\\source\\repos\\villa_api\\villa_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{691DBB38-E70C-409D-8C2F-B276E45FFEA3}|Villa_Web\\Villa_Web.csproj|solutionrelative:villa_web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VillaNumberController.cs",
+              "DocumentMoniker": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Controllers\\VillaNumberController.cs",
+              "RelativeDocumentMoniker": "Villa_Web\\Controllers\\VillaNumberController.cs",
+              "ToolTip": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Controllers\\VillaNumberController.cs",
+              "RelativeToolTip": "Villa_Web\\Controllers\\VillaNumberController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAuwDoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T23:35:34.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VillaController.cs",
+              "DocumentMoniker": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Controllers\\VillaController.cs",
+              "RelativeDocumentMoniker": "Villa_Web\\Controllers\\VillaController.cs",
+              "ToolTip": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Controllers\\VillaController.cs",
+              "RelativeToolTip": "Villa_Web\\Controllers\\VillaController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAqwC0AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T23:29:26.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Villa_Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Villa_Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADIAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T23:27:15.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Notification.cshtml",
+              "DocumentMoniker": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Views\\Shared\\_Notification.cshtml",
+              "RelativeDocumentMoniker": "Villa_Web\\Views\\Shared\\_Notification.cshtml",
+              "ToolTip": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Web\\Views\\Shared\\_Notification.cshtml",
+              "RelativeToolTip": "Villa_Web\\Views\\Shared\\_Notification.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T23:17:23.175Z",
+              "EditorCaption": ""
             }
           ]
         }

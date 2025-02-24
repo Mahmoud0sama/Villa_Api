@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mtsid\\source\\repos\\Villa\\Villa_Utility\\Villa_Utility.csproj",
+      "projectUniqueName": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Utility\\Villa_Utility.csproj",
       "projectName": "Villa_Utility",
-      "projectPath": "C:\\Users\\mtsid\\source\\repos\\Villa\\Villa_Utility\\Villa_Utility.csproj",
+      "projectPath": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Utility\\Villa_Utility.csproj",
       "packagesPath": "C:\\Users\\mtsid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mtsid\\source\\repos\\Villa\\Villa_Utility\\obj\\",
+      "outputPath": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_Utility\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mtsid\\AppData\\Roaming\\NuGet\\NuGet.Config",
