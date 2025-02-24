@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "/mafUaH3LLjsC+LlMSE/sDWkwLoiH30ufC02+Jsy0fzC5Pbr6sk0FzMTyNtYQE5MQBmNPig2TjPaBYEMixujhw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mtsid\\source\\repos\\Villa\\Villa_Web\\Villa_Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mtsid\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\mtsid\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtsid\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtsid\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\mtsid\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

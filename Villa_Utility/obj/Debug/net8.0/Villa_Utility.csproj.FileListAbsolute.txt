@@ -1,0 +1,11 @@
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\bin\Debug\net8.0\Villa_Utility.deps.json
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\bin\Debug\net8.0\Villa_Utility.dll
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\bin\Debug\net8.0\Villa_Utility.pdb
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\Villa_Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\Villa_Utility.AssemblyInfoInputs.cache
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\Villa_Utility.AssemblyInfo.cs
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\Villa_Utility.csproj.CoreCompileInputs.cache
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\Villa_Utility.dll
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\refint\Villa_Utility.dll
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\Villa_Utility.pdb
+C:\Users\mtsid\source\repos\Villa\Villa_Utility\obj\Debug\net8.0\ref\Villa_Utility.dll
