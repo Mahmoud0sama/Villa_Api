@@ -298,3 +298,4 @@ C:\Users\mtsid\source\repos\Villa_Api\Villa_API\obj\Debug\net8.0\refint\Villa_AP
 C:\Users\mtsid\source\repos\Villa_Api\Villa_API\obj\Debug\net8.0\Villa_API.pdb
 C:\Users\mtsid\source\repos\Villa_Api\Villa_API\obj\Debug\net8.0\Villa_API.genruntimeconfig.cache
 C:\Users\mtsid\source\repos\Villa_Api\Villa_API\obj\Debug\net8.0\ref\Villa_API.dll
+C:\Users\mtsid\source\repos\Villa_Api\Villa_API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
