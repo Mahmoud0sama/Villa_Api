@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -74,6 +75,7 @@ namespace Villa_API.Controllers
 			return _response;
 		}
 		[HttpPost]
+		[Authorize(Roles ="admin")]
 		[ProducesResponseType(StatusCodes.Status201Created)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -110,6 +112,7 @@ namespace Villa_API.Controllers
 			}
 			return _response;
 		}
+		[Authorize(Roles = "admin")]
 		[HttpDelete("{id:int}", Name = "DeleteVillaNumber")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -140,6 +143,7 @@ namespace Villa_API.Controllers
 			return _response;
 
 		}
+		[Authorize(Roles = "admin")]
 		[HttpPut("{id:int}", Name = "UpdateVillaNumber")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
