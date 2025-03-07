@@ -46,14 +46,23 @@ namespace Villa_API.Repository
             return await querry.FirstOrDefaultAsync();
         }
 
-        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
+        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null,
+			int pageSize = 0, int pageNumber = 1)
         {
             IQueryable<T> querry = dbset;
             if (filter != null)
             {
                 querry = querry.Where(filter);
             }
-            if (includeProperties != null)
+			if (pageSize > 0)
+			{
+				if (pageSize > 100)
+				{
+					pageSize = 100;
+				}
+				querry = querry.Skip(pageSize * (pageNumber - 1)).Take(pageSize);
+			}
+			if (includeProperties != null)
             {
                 foreach (var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {

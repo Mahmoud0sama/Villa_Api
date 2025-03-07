@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Asp.Versioning;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -11,8 +12,10 @@ using Villa_API.Repository.IRepository;
 
 namespace Villa_API.Controllers
 {
-	[Route("api/VillaNumberAPI")]
+	[Route("api/v{version:apiVersion}/VillaNumberAPI")]
 	[ApiController]
+	[ApiVersion("1.0")]
+	[ApiVersion("2.0")]
 	public class VillaNumberAPIController : ControllerBase
 	{
 		protected APIResponse _response;
@@ -55,12 +58,14 @@ namespace Villa_API.Controllers
 				if (id == 0)
 				{
 					_response.StatusCode = HttpStatusCode.BadRequest;
+					_response.IsSuccessfull = false;
 					return BadRequest(_response);
 				}
 				var villaNumber = await _dbVillaNumber.GetAsync(u => u.VillaNo == id);
 				if (villaNumber == null)
 				{
 					_response.StatusCode = HttpStatusCode.NotFound;
+					_response.IsSuccessfull = false;
 					return NotFound(_response);
 				}
 				_response.Result = _mapper.Map<VillaNumberDTO>(villaNumber);
@@ -86,11 +91,13 @@ namespace Villa_API.Controllers
 				if (await _dbVillaNumber.GetAsync(u => u.VillaNo == createDTO.VillaNo) != null)
 				{
 					ModelState.AddModelError("ErrorMessages", "Villa Number Already Exists!");
+					_response.IsSuccessfull = false;
 					return BadRequest(ModelState);
 				}
 				if(await _dbVilla.GetAsync(u=>u.Id == createDTO.VillaId) == null)
 				{
 					ModelState.AddModelError("ErrorMessages", "Villa Id Is Invalid!");
+					_response.IsSuccessfull = false;
 					return BadRequest(ModelState);
 				}
 
@@ -153,6 +160,7 @@ namespace Villa_API.Controllers
 			{
 				if (updateDTO == null || id != updateDTO.VillaNo)
 				{
+					_response.IsSuccessfull = false;
 					return BadRequest();
 				}
 				if (await _dbVilla.GetAsync(u => u.Id == updateDTO.VillaId) == null)

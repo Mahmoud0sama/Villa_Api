@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0Gv9he19qMS0ODvfLpLRvseJg3SHA/uV/k4AClEczRc7HVsoiyvP9/clTuKr3xU1myEHUZ/9SPKloXw/J0/sNQ==",
+  "dgSpecHash": "j8osbLqOp5070OYZL2CHaB01Nj2y86aAqVpizX5BJIFwJjcPPTUq6COx6ggXBy5eaqXOjIFK1XVkByuYCV2yGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\mtsid\\source\\repos\\Villa_Api\\Villa_API\\Villa_API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mtsid\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
+    "C:\\Users\\mtsid\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
+    "C:\\Users\\mtsid\\.nuget\\packages\\asp.versioning.mvc\\8.1.0\\asp.versioning.mvc.8.1.0.nupkg.sha512",
+    "C:\\Users\\mtsid\\.nuget\\packages\\asp.versioning.mvc.apiexplorer\\8.1.0\\asp.versioning.mvc.apiexplorer.8.1.0.nupkg.sha512",
     "C:\\Users\\mtsid\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\mtsid\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mtsid\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

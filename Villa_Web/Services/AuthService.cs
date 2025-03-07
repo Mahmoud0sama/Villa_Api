@@ -22,8 +22,8 @@ namespace Villa_Web.Services
             {
                ApiType = SD.ApiType.POST,
                Data = obj,
-               Url = villaUrl+ "/api/UserAuth/Login"
-            });
+               Url = villaUrl+ "/api/v1/UserAuth/Login"
+			});
 
             
         }
@@ -34,8 +34,8 @@ namespace Villa_Web.Services
             {
                 ApiType = SD.ApiType.POST,
                 Data = obj,
-                Url = villaUrl + "/api/UserAuth/Register"
-            });
+                Url = villaUrl + "/api/v1/UserAuth/Register"
+			});
         }
     }
 }

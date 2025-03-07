@@ -1,7 +1,10 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Runtime.Intrinsics;
 using System.Text;
 using Villa_API;
 using Villa_API.Data;
@@ -14,10 +17,22 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
+builder.Services.AddResponseCaching();
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.ReportApiVersions = true;
+}).AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+});
+
 var key = builder.Configuration.GetValue<string>("ApiSettings:SecretKey");
 builder.Services.AddAuthentication(x =>
 {
@@ -36,7 +51,13 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("Default30", new CacheProfile()
+    {
+        Duration = 30
+    });
+}).AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddEndpointsApiExplorer();
@@ -69,6 +90,20 @@ builder.Services.AddSwaggerGen(options =>
             new List<string>()
         }
     });
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Villa_API",
+        Description = "API to manage a villa",
+        //TermsOfService = new Uri("")
+    });
+	options.SwaggerDoc("v2", new OpenApiInfo
+	{
+		Version = "v2",
+		Title = "Villa_API",
+		Description = "API to manage a villa",
+		//TermsOfService = new Uri("")
+	});
 
 });
 var app = builder.Build();
@@ -77,7 +112,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "VillaV1");
+		options.SwaggerEndpoint("/swagger/v2/swagger.json", "VillaV2");
+	});
 }
 
 app.UseHttpsRedirection();

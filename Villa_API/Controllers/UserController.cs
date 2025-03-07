@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.Net;
 using Villa_API.Models;
@@ -7,8 +8,9 @@ using Villa_API.Repository.IRepository;
 
 namespace Villa_API.Controllers
 {
-    [Route("api/UserAuth")]
-    [ApiController]
+    [Route("api/v{version:apiVersion}/UserAuth")]
+	[ApiController]
+	[ApiVersionNeutral]
     public class UserController : Controller
     {
         private readonly IUserRepository _userRepo;
